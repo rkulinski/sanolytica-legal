@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sanolytica Privacy Policy</title>
+<style>
+  :root {
+    --text: #1a1a1a;
+    --muted: #595959;
+    --bg: #ffffff;
+    --border: #e3e3e3;
+    --link: #0a5fb4;
+    --max-width: 720px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text: #e8e8e8;
+      --muted: #a6a6a6;
+      --bg: #121212;
+      --border: #2a2a2a;
+      --link: #6cb1ff;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 48px 20px 80px;
+  }
+  h1 {
+    font-size: 1.75rem;
+    margin: 0 0 4px;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin: 0 0 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+  }
+  h2 {
+    font-size: 1.15rem;
+    margin: 36px 0 12px;
+  }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 8px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 14px;
+    font-size: 0.95rem;
+  }
+  th, td {
+    text-align: left;
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+    vertical-align: top;
+  }
+  th { background: rgba(127,127,127,0.08); }
+  a { color: var(--link); }
+  code, .placeholder {
+    background: rgba(255, 196, 0, 0.18);
+    border: 1px solid rgba(190, 140, 0, 0.35);
+    border-radius: 4px;
+    padding: 0 4px;
+  }
+  footer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Sanolytica Privacy Policy</h1>
+  <p class="meta">Effective date: November 2, 2026</p>
+
+  <p>Sanolytica ("Sanolytica," "we," "us," or "our") is a mobile nutrition-tracking app that helps you log meals by photo, voice, or manual entry and track calories, protein, and fat over time. This Privacy Policy explains what information we collect through the Sanolytica app and API, how we use and share it, how long we keep it, and the choices and rights you have. It applies to the iOS and Android apps and the backend services they connect to.</p>
+  <p>By creating a Sanolytica account, you agree to the practices described in this policy.</p>
+
+  <h2>Information We Collect</h2>
+  <ul>
+    <li><strong>Account information</strong>: email address and password, authenticated through AWS Cognito, plus locale and timezone.</li>
+    <li><strong>Meal content you provide</strong>: photos of meals, voice recordings describing meals or corrections, and any text you type while editing a meal draft. Photos and recordings are sent to our AI provider (OpenAI) for analysis and are stored only temporarily &mdash; they are deleted once analysis completes (see Data Retention).</li>
+    <li><strong>Saved meal and nutrition records</strong>: saved meals, their nutrient breakdown (calories, protein, fat, and other tracked nutrients), and the edit/revision history of each saved meal.</li>
+    <li><strong>Personalization notes ("memories")</strong>: with AI learning enabled (on by default, toggleable in Settings), Sanolytica may save short notes inferred from your usage &mdash; such as typical portion sizes, household context, or your preferred tone &mdash; or notes you create yourself, to make future meal analysis faster and more accurate. You can review, edit, or delete these at any time.</li>
+    <li><strong>Subscription and payment data</strong>: subscription status, plan, renewal date, and purchase platform (Apple App Store or Google Play), managed through RevenueCat. We never receive or store your payment card details &mdash; purchases are processed entirely by Apple or Google.</li>
+    <li><strong>Device and diagnostic data</strong>: crash and performance data collected via Sentry, which may include device model, OS version, app version, and stack traces.</li>
+    <li><strong>Camera, photo library, and microphone access</strong>: used only when you choose to photograph a meal, select a photo, or record a voice description.</li>
+  </ul>
+  <p>We do not collect your location, and we do not integrate with Apple Health, Google Fit, or other health-sensor data.</p>
+
+  <h2>How We Use Information</h2>
+  <ul>
+    <li>Analyze meal photos and voice recordings to produce nutrient drafts you review and save.</li>
+    <li>Maintain your saved meal history, nutrition dashboards, and revision history.</li>
+    <li>Personalize future analysis using memories you've confirmed or that the AI has suggested, when AI learning is enabled.</li>
+    <li>Manage your account, verify your email, and authenticate you.</li>
+    <li>Process and verify your subscription and gate premium features accordingly.</li>
+    <li>Monitor app stability and performance, and diagnose crashes.</li>
+    <li>Enforce usage limits and abuse safeguards, and administer accounts (including, where necessary, disabling an account for abuse or billing issues).</li>
+    <li>Comply with legal obligations.</li>
+  </ul>
+  <p>We do not sell your personal data, and we do not use it for third-party advertising.</p>
+
+  <h2>How We Share Information</h2>
+  <p>We share information only as needed to operate Sanolytica:</p>
+  <table>
+    <thead>
+      <tr><th>Recipient</th><th>Purpose</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>OpenAI</td><td>Processes meal photos, voice recordings, and transcripts to generate nutrition drafts. Not persisted by us beyond temporary storage.</td></tr>
+      <tr><td>Amazon Web Services (AWS)</td><td>Hosts our database, API, temporary image storage, and user authentication (Cognito).</td></tr>
+      <tr><td>RevenueCat</td><td>Manages and validates subscriptions purchased through the Apple App Store or Google Play.</td></tr>
+      <tr><td>Apple / Google</td><td>Process all in-app purchases directly; we receive only subscription status, never payment details.</td></tr>
+      <tr><td>Sentry</td><td>Receives crash and performance diagnostics.</td></tr>
+    </tbody>
+  </table>
+  <p>We may also disclose information if required by law or legal process, or to protect the rights, safety, or property of Sanolytica, our users, or others. We do not share your data with advertisers or data brokers, and we do not sell personal data.</p>
+
+  <h2>Data Retention</h2>
+  <ul>
+    <li><strong>Meal photos and voice recordings</strong>: deleted automatically once AI analysis of them completes or fails; not kept in permanent storage.</li>
+    <li><strong>Saved meals, nutrient data, and revision history</strong>: retained while your account is active, so you can review your history.</li>
+    <li><strong>Memories (personalization notes)</strong>: retained until you delete them or your account is deleted.</li>
+    <li><strong>Account and subscription records</strong>: retained while your account is active, and as needed afterward for legal, tax, or accounting obligations.</li>
+    <li><strong>Diagnostic data (Sentry)</strong>: retained per Sentry's standard retention period.</li>
+  </ul>
+  <p>Deleting your account removes your authentication identity and permanently deletes your local data (meals, memories, nutrient settings, usage records) from our database &mdash; see Your Rights and Choices.</p>
+
+  <h2>Data Security</h2>
+  <p>We use industry-standard safeguards, including encryption in transit (HTTPS/TLS), authentication via AWS Cognito, and access controls limiting who can view your data. No method of transmission or storage is 100% secure, and we cannot guarantee absolute security.</p>
+
+  <h2>Your Rights and Choices</h2>
+  <p>Depending on where you live, you may have the right to:</p>
+  <ul>
+    <li>Access, correct, or export your personal data.</li>
+    <li><strong>Delete your account and its data</strong> &mdash; available in the app (Account &gt; Delete Account). This removes your authentication identity and cascades deletion of your meals, memories, nutrient settings, and usage records.</li>
+    <li><strong>Turn AI learning on or off</strong> in Settings, controlling whether we save personalization "memories" from your usage.</li>
+    <li>Review, edit, or delete individual memories at any time.</li>
+    <li><strong>Manage or cancel your subscription</strong> through your Apple ID or Google Play account settings &mdash; we do not control that billing relationship directly.</li>
+    <li>Object to or restrict certain processing, or lodge a complaint with your local data protection authority.</li>
+  </ul>
+  <p>To exercise any of these rights, contact us at <a href="mailto:sanolytica@rkstudio.net">sanolytica@rkstudio.net</a>.</p>
+
+  <h2>Children's Privacy</h2>
+  <p>Sanolytica is not directed to children under 16, and we do not knowingly collect personal data from them. If you believe a child has provided us with personal data, contact us and we will delete it.</p>
+
+  <h2>International Data Transfers</h2>
+  <p>We and our service providers (including OpenAI, AWS, Sentry, and RevenueCat) may process data outside your country of residence, including in the United States. Where required, we rely on appropriate safeguards, such as Standard Contractual Clauses, for these transfers.</p>
+
+  <h2>Changes to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time. We will revise the effective date above and, for material changes, notify you in the app or by email.</p>
+
+  <h2>Contact Us</h2>
+  <p>Questions about this policy or your data: <a href="mailto:sanolytica@rkstudio.net">sanolytica@rkstudio.net</a></p>
+  <p class="placeholder">[Legal entity name and registered business address]</p>
+
+  <footer>&copy; <span id="year"></span> Sanolytica</footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</main>
+</body>
+</html>
